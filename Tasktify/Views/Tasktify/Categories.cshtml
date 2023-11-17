@@ -1,0 +1,213 @@
+﻿@{
+    ViewData["Title"] = "Categories";
+}
+
+<style>
+    h3 {
+        font-size: 70px;
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    #categoriesFolder {
+        margin-top: -60px;
+    }
+
+    #addNewWorkTaskContainer {
+        width: 1108px;
+        height: 300px;
+        margin-left: 32px;
+        border-radius: 30px;
+        border: 3px solid #DEDEDE;
+        background: #FFF8E8;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #workText {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #addNewWorkTask {
+        display:flex;
+        width: 1070px;
+        height: 50px;
+        margin-left: 20px;
+        margin-top: -45px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 20px;
+        fill: #FFFEFE;
+        stroke-width: 20px;
+        stroke: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    #addNewWorkTask button {
+         margin-right: 10px;
+         cursor: pointer;
+         background: none;
+         border: none;
+         padding: 10px;
+    }
+
+    #addNewWorkTaskText {
+        font-size:20px;
+        margin-top: 10px;
+    }
+
+    #addNewPersonalTaskContainer {
+        width: 530px;
+        height: 300px;
+        margin-top: 30px;
+        margin-left: 32px;
+        border-radius: 30px;
+        border: 3px solid #DEDEDE;
+        background: #DADADA;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+    }
+
+    #personalText {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #addNewPersonalTask {
+        display: flex;
+        width: 460px;
+        height: 50px;
+        margin-left: 20px;
+        margin-top: -45px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 20px;
+        fill: #FFFEFE;
+        stroke-width: 20px;
+        stroke: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    #addNewPersonalTask button {
+        margin-right: 10px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+
+    #addNewPersonalTaskText {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    
+    #addNewSchoolTaskContainer {
+        width: 530px;
+        height: 300px;
+        margin-top: -305px;
+        margin-left: 610px;
+        border-radius: 30px;
+        border: 3px solid #D2F1F5;
+        background: #D2F1F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #schoolText {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #addNewSchoolTask {
+        display: flex;
+        width: 460px;
+        height: 50px;
+        margin-left: 20px;
+        margin-top: -45px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 20px;
+        fill: #FFFEFE;
+        stroke-width: 20px;
+        stroke: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    #addNewSchoolTask button {
+        margin-right: 10px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+
+    #addNewSchoolTaskText {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+</style>
+
+<h3>Category</h3>
+
+<div id="categoriesFolder">
+    <div id="addNewWorkTaskContainer">
+    <h5 id="workText">Work</h5>
+        <div id="addNewWorkTask">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 37 36" fill="none">
+                    <g clip-path="url(#clip0_66_1501)">
+                        <path d="M56 18L-2 18" stroke="#D9D9D9" stroke-width="8" stroke-miterlimit="1.30541" />
+                        <line x1="18" y1="-2" x2="18" y2="56" stroke="#D9D9D9" stroke-width="8" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_66_1501">
+                            <rect width="37" height="36" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <h4 id="addNewWorkTaskText">Add New Task</h4>
+        </div>
+    </div>
+    <div id="addNewPersonalTaskContainer">
+        <h5 id="personalText">Personal</h5>
+        <div id="addNewPersonalTask">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 37 36" fill="none">
+                    <g clip-path="url(#clip0_66_1501)">
+                        <path d="M56 18L-2 18" stroke="#D9D9D9" stroke-width="8" stroke-miterlimit="1.30541" />
+                        <line x1="18" y1="-2" x2="18" y2="56" stroke="#D9D9D9" stroke-width="8" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_66_1501">
+                            <rect width="37" height="36" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <h4 id="addNewPersonalTaskText">Add New Task</h4>
+        </div>
+    </div>
+    <div id="addNewSchoolTaskContainer">
+        <h5 id="schoolText">School</h5>
+        <div id="addNewSchoolTask">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 37 36" fill="none">
+                    <g clip-path="url(#clip0_66_1501)">
+                        <path d="M56 18L-2 18" stroke="#D9D9D9" stroke-width="8" stroke-miterlimit="1.30541" />
+                        <line x1="18" y1="-2" x2="18" y2="56" stroke="#D9D9D9" stroke-width="8" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_66_1501">
+                            <rect width="37" height="36" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <h4 id="addNewSchoolTaskText">Add New Task</h4>
+        </div>
+    </div>
+</div>

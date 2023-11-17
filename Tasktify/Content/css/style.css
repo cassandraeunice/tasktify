@@ -1,0 +1,39 @@
+﻿#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+}
+
+#sidebar .custom-menu h3 {
+    color: white;
+    padding: 10px;
+
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+#sidebar ul li {
+    padding: 10px;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: white;
+
+}
+
+#sidebar a:hover {
+    background-color: #555;
+}

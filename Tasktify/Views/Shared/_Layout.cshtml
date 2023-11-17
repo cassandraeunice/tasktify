@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tasktify</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        * {
+            font-family: 'Poppins'
+        }
+
+        body {
+            display: flex;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 300px;
+            background: #D4F5E1;
+            mix-blend-mode: darken;
+            margin-top: -8px;
+            margin-left: -8px;
+            top: 0;
+            left: 0; 
+            bottom: 0;
+            z-index: 1000;
+            overflow-y: auto;
+           
+            
+        }
+
+        #tasktify {
+            margin-left: 25px;
+            color: #000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        span {
+            color: rgba(37, 204, 74, 0.87);
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: -15px;
+            color: black;
+        }
+
+        li a.clicked, li a:hover {
+            background: black;
+            color:white;
+            padding: 5px;
+            border: 1px solid #FFF;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px 0px whitesmoke;
+        }
+
+        li {
+            display: flex
+        }
+
+        #dashboardIcon, #todoIcon, #categoriesIcon {
+            padding-right: 20px;
+            margin-left: -15px;
+        }
+
+        #dashboard {
+            margin-left: 350px; 
+            margin-top: -760px;
+            color: #000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            align-self: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar">
+                <div class="custom-menu">
+                    <br />
+                    <h3 id="tasktify">TASK<span>TIFY.</span></h3>
+
+                    <ul style="list-style-type:none;">
+                        <li>
+                            <a href="@Url.Action("UserProfile")">(name dapat dito)</a>
+                        </li>
+                        <br />
+                        <li>
+                            <svg id="dashboardIcon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 23 29" fill="none">
+                                <rect x="0.150452" y="0.494751" width="9.90251" height="6.99943" rx="1.5" fill="#25CC4A" fill-opacity="0.87" />
+                                <rect x="12.8822" y="21.493" width="9.90251" height="6.99943" rx="1.5" fill="#25CC4A" fill-opacity="0.87" />
+                                <rect x="0.150452" y="10.9939" width="9.90251" height="17.4986" rx="1.5" fill="white" />
+                                <rect x="12.8822" y="0.494751" width="9.90251" height="17.4986" rx="1.5" fill="white" />
+                            </svg>
+                            <a href="@Url.Action("Dashboard")">Dashboard</a>
+                        </li>
+                        <br />
+                        <li>
+                            <svg id="todoIcon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 31" fill="none">
+                                <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M4.97924 4H2C0.895431 4 0 4.89543 0 6V28.951C0 30.0556 0.89543 30.951 2 30.951H17.9171C19.0217 30.951 19.9171 30.0556 19.9171 28.951V6C19.9171 4.89543 19.0217 4 17.9171 4H14.9378V4.67383C14.9378 5.79018 14.1018 6.69516 13.0706 6.69516H6.84646C5.81522 6.69516 4.97924 5.79018 4.97924 4.67383V4Z" fill="#6DBA8B" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.73455 1.34752H7.5C7.22386 1.34752 7 1.57137 7 1.84752V3.54262C7 3.81876 7.22386 4.04262 7.5 4.04262H11.7037C11.9799 4.04262 12.2037 3.81876 12.2037 3.54262V1.84752C12.2037 1.57137 11.9799 1.34752 11.7037 1.34752H10.4691C10.4691 0.6033 10.0808 0 9.60184 0C9.12286 0 8.73457 0.6033 8.73455 1.34752Z" fill="#6DBA8B" />
+                                <path opacity="0.3" d="M2.66357 11.6525C2.66357 10.9083 3.26689 10.3049 4.01113 10.3049H5.65245C6.39668 10.3049 7 10.9083 7 11.6525V11.6525C7 12.3967 6.39668 13 5.65245 13H4.01113C3.26689 13 2.66357 12.3967 2.66357 11.6525V11.6525Z" fill="#6DBA8B" />
+                                <rect opacity="0.3" x="2" y="14" width="7.80557" height="2.6951" rx="1.34755" fill="#6DBA8B" />
+                            </svg>
+                            <a href="@Url.Action("Todo")">To-do</a>
+                        </li>
+                        <br />
+                        <li>
+                            <svg id="categoriesIcon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 26 26" fill="none">
+                                <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M2.66809 16.9872C3.97892 22.0613 8.60189 25.8106 14.1037 25.8106C20.625 25.8106 25.9114 20.5433 25.9114 14.0459C25.9114 8.04659 21.4044 3.0961 15.58 2.37231V16.9872H2.66809Z" fill="black" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6277 11.1045V0.810547C6.60645 0.810599 1.63788 5.30119 0.911499 11.1045H12.6277Z" fill="black" />
+                            </svg>
+                            <a href="@Url.Action("Categories")" id="categories">Categories</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </div>
+        <div>
+
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        function setClicked(element) {
+            var links = document.querySelectorAll('li a');
+            links.forEach(link => link.classList.remove('clicked'));
+
+            element.classList.add('clicked');
+        }
+    </script>
+</body>
+</html>

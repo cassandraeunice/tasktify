@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "User Profile";
+}
+
+<style>
+    h3 {
+        font-size: 70px;
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    #formContainer {
+        margin-left: 270px;
+    }
+
+    #firstName label{
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+    #firstName input {
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #lastName {
+        margin-left: 350px;
+        margin-top: -65.5px;
+    }
+
+    #lastName label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #lastName input {
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #email label{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #email input {
+        height: 30px;
+        width: 650px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #newPassword label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #newPassword input {
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #confPassword {
+        margin-left: 350px;
+        margin-top: -65.5px;
+    }
+
+    #confPassword label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #confPassword input {
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #save {
+        height: 40px;
+        width: 70px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        background: #6DBA8B;
+    }
+
+    #cancel {
+        height: 40px;
+        width: 90px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        background: #D5D5D5;
+    }
+
+</style>
+
+<h3>User Profile</h3>
+
+<div id="formContainer">
+    <form asp-action="UserProfile" asp-controller="Tasktify" method="post">
+        <div id="firstName">
+            <label>First Name</label> <br />
+            <input type="text"/>
+        </div>
+        <div id="lastName">
+            <label>Last Name</label> <br />
+            <input type="text" />
+        </div> <br />
+        <div id="email">
+            <label>Email</label> <br />
+            <input type="text" />
+        </div> <br />
+        <div id="newPassword">
+            <label>New Password</label> <br />
+            <input type="text" />
+        </div>
+        <div id="confPassword">
+            <label>Confirm Password</label> <br />
+            <input type="text" />
+        </div> <br />
+        <div id="buttons">
+            <button id="save">Save</button>
+            <button id="cancel">Cancel</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "To-do";
+}
+<style>
+    h3 {
+        font-size: 70px;
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    #todosFolder {
+        margin-top: -50px;
+    }
+
+    #pendingContainer {
+        position: relative;
+        width: 350px;
+        height: 600px;
+        margin-left: 35px;
+        margin-top: -40px;
+        border-radius: 30px;
+        border: 3px solid #DEDEDE;
+        background: #FCDFDF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #ongoingContainer {
+        width: 350px;
+        height: 600px;
+        margin-top: -605px;
+        margin-left: 415px;
+        border-radius: 30px;
+        border: 3px solid #DEDEDE;
+        background: #D2F1F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    }
+
+    #completedContainer {
+        width: 350px;
+        height: 600px;
+        margin-top: -605px;
+        margin-left: 795px;
+        border-radius: 30px;
+        border: 3px solid #DEDEDE;
+        background: #D4F5E1;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #pending {
+        width: 300px;
+        height: 70px;
+        margin-left: 25px;
+        margin-top: -20px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 25px;
+        fill: #FFFEFE;
+        stroke-width: 20px;
+        stroke: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    #pendingText {
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    #ongoing {
+        width: 300px;
+        height: 70px;
+        margin-left: 25px;
+        margin-top: -20px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 25px;
+        fill: #FFFEFE;
+        stroke-width: 20px;
+        stroke: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    #ongoingText {
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    #completed {
+        width: 300px;
+        height: 70px;
+        margin-left: 25px;
+        margin-top: -20px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 25px;
+        fill: #FFFEFE;
+        stroke-width: 20px;
+        stroke: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    #completedText {
+        padding: 10px;
+        font-size: 30px;
+    }
+</style>
+
+<h3>To-do</h3>
+
+<div id="todosFolder">
+    <div id="pendingContainer">
+        <div id="pending">
+            <h5 id="pendingText">Pending</h5>
+        </div>
+        
+    </div>
+
+    <div id="ongoingContainer">
+        <div id="ongoing">
+            <h5 id="ongoingText">On-going</h5>
+
+        </div>
+    </div>
+
+    <div id="completedContainer">
+        <div id="completed">
+            <h5 id="completedText">Completed</h5>
+
+        </div>
+    </div>
+   
+</div>
