@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_Login";
+}
+
+<style>
+    #blueEllipse {
+        width: 500px;
+        height: 500px;
+        margin-left: 700px;
+        margin-top: -150px;
+        border-radius: 390px;
+        background: #2D55FB;
+        filter: blur(280px);
+        z-index: -1;
+    }
+
+    #blueEllipse2 {
+        width: 500px;
+        height: 300px;
+        margin-left: -800px;
+        margin-top: -200px;
+        border-radius: 390px;
+        background: #2D55FB;
+        filter: blur(280px);
+        z-index: -1;
+    }
+
+    #loginContainer {
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+        background: #FFF;
+        margin-top: -500px;
+        margin-left: 400px;
+        position: relative;
+    }
+
+    h5 {
+        padding: 15px;
+        font-size: 35px;
+    }
+
+    input {
+        width: 500px;
+        height: 30px;
+        border-radius: 8px;
+        border: 3px solid #DADADA;
+
+    }
+
+    form {
+        margin-top: -40px;
+    }
+
+    label {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #emailText {
+        margin-left: -440px;
+    }
+
+    #passwordText {
+        margin-left: -390px;
+    }
+
+    button {
+        width: 510px;
+        height: 40px;
+        border-radius: 8px;
+        background: #6DBA8B;
+        border: none;
+    }
+</style>
+
+<center>
+    <div id="blueEllipse">
+    </div>
+    <div id="blueEllipse2">
+    </div>
+</center>
+
+<div id="loginContainer">
+    <center>
+    <h5>Login to your Account</h5>
+    <form id="loginForm" asp-action="LoginPage" asp-controller="Tasktify" method="post">
+        <label id="emailText">Email</label> <br />
+        <input /><br />
+        <label id="passwordText">Password</label> <br />
+        <input /> <br />
+        <button>Login Now</button>
+
+    </form>
+
+
+    </center>
+    
+</div>
