@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Tasktify}/{action=LoginPage}/{id?}");
+    pattern: "{controller=Tasktify}/{action=Tasks}/{id?}");
 
 app.Run();

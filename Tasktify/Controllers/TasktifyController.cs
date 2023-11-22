@@ -23,7 +23,7 @@ namespace Tasktify.Controllers
             return View();
         }
         
-        public IActionResult Todo()
+        public IActionResult Tasks()
         {
             return View();
         }
