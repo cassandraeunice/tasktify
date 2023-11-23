@@ -13,123 +13,141 @@
 
     #todosFolder {
         margin-top: -50px;
+        width: 160vh;
+    }
+    
+    table, th, td {
+        padding: 1rem;
+        border-collapse: collapse;
+        text-align: center;
     }
 
-    #pendingContainer {
-        position: relative;
-        width: 350px;
-        height: 600px;
-        margin-left: 35px;
-        margin-top: -40px;
-        border-radius: 30px;
-        border: 3px solid #DEDEDE;
-        background: #FCDFDF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    thead th {
+        position: sticky;
+        top: 0;
+        left: 0;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #9A9A9A;
     }
 
-    #ongoingContainer {
-        width: 350px;
-        height: 600px;
-        margin-top: -605px;
-        margin-left: 415px;
-        border-radius: 30px;
-        border: 3px solid #DEDEDE;
-        background: #D2F1F5;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
+    tbody tr {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: right;
     }
 
-    #completedContainer {
-        width: 350px;
-        height: 600px;
-        margin-top: -605px;
-        margin-left: 795px;
-        border-radius: 30px;
-        border: 3px solid #DEDEDE;
-        background: #D4F5E1;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    main.table {
+        width: 100%;
+        height: 100%;
+        background-color: #fff5;
+
+        overflow: hidden;
     }
 
-    #pending {
-        width: 300px;
-        height: 70px;
-        margin-left: 25px;
-        margin-top: -20px;
-        flex-shrink: 0;
-        background: white;
-        border-radius: 25px;
-        fill: #FFFEFE;
-        stroke-width: 20px;
-        stroke: #FFF;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    table {
+        width: 100%;
     }
 
-    #pendingText {
-        padding: 10px;
-        font-size: 30px;
+    .category {
+        padding: .4rem 0;
+        border-radius: 2rem;
+        text-align: center;
     }
 
-    #ongoing {
-        width: 300px;
-        height: 70px;
-        margin-left: 25px;
-        margin-top: -20px;
-        flex-shrink: 0;
-        background: white;
-        border-radius: 25px;
-        fill: #FFFEFE;
-        stroke-width: 20px;
-        stroke: #FFF;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .category.school {
+            background-color: #D2F1F5;
     }
 
-    #ongoingText {
-        padding: 10px;
-        font-size: 30px;
+    .category.organization {
+            background-color: #FFF8E8;
+        }
+
+    .category.personal {
+            background-color: #DADADA;
+        }
+
+    .Add_Task {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        height: 66px;
+        width: 166px;
+        border-radius: 10px;
+        background: #8ACCA4;
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #FFFBFB;
+        border: none;
+        margin-right:20px;
     }
 
-    #completed {
-        width: 300px;
-        height: 70px;
-        margin-left: 25px;
-        margin-top: -20px;
-        flex-shrink: 0;
-        background: white;
-        border-radius: 25px;
-        fill: #FFFEFE;
-        stroke-width: 20px;
-        stroke: #FFF;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    }
-
-    #completedText {
-        padding: 10px;
-        font-size: 30px;
-    }
 </style>
 
-<h3>To-do</h3>
+<h3>Tasks</h3>
 
 <div id="todosFolder">
-    <div id="pendingContainer">
-        <div id="pending">
-            <h5 id="pendingText">Pending</h5>
-        </div>
+
+    <button class="Add_Task">ADD TASK+</button>
+
+    <main class="table">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>""</th>
+                        <th>Status</th>
+                        <th>Tasks</th>
+                        <th>Category</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>edit&delete</td>
+                        <td>checkbox</td>
+                        <td>Coding</td>
+                        <td><p class="category school">School</p></td>
+                        <th>November 14, 2023</th>
+                        <td>High</td>
+                        <td>Sermonan si Hugo</td>
+                    </tr>
+
+                    <tr>
+                        <td>edit&delete</td>
+                        <td>checkbox</td>
+                        <td>Coding</td>
+                        <td><p class="category organization">Organization</p></td>
+                        <th>November 14, 2023</th>
+                        <td>Medium</td>
+                        <td>Sermonan si Hugo</td>
+                    </tr>
+
+                    <tr>
+                        <td>edit&delete</td>
+                        <td>checkbox</td>
+                        <td>Coding</td>
+                        <td><p class="category personal">Personal</p></td>
+                        <th>November 14, 2023</th>
+                        <td>Low</td>
+                        <td>Sermonan si Hugo</td>
+                    </tr>
+
+                </tbody>
+            </table>
         
-    </div>
-
-    <div id="ongoingContainer">
-        <div id="ongoing">
-            <h5 id="ongoingText">On-going</h5>
-
-        </div>
-    </div>
-
-    <div id="completedContainer">
-        <div id="completed">
-            <h5 id="completedText">Completed</h5>
-
-        </div>
-    </div>
+    </main>
    
 </div>
