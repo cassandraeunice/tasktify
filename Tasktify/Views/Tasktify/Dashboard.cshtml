@@ -29,7 +29,7 @@
 
     #personal {
         color: black;
-        font-size: 25px;
+        font-size: 20px;
         margin-left: 20px;
         padding:10px;
     }
@@ -52,7 +52,7 @@
 
     #work {
         color: black;
-        font-size: 25px;
+        font-size: 20px;
         margin-left: 20px;
         padding: 10px;
     }
@@ -74,7 +74,7 @@
 
     #school {
         color: black;
-        font-size: 25px;
+        font-size: 20px;
         margin-left: 20px;
         padding: 10px;
     }
@@ -90,7 +90,7 @@
 
     #todosContainer {
         width: 1108px;
-        height: 450px;
+        height: 430px;
         margin-left: 35px;
         margin-top:30px;
         border-radius: 30px;
@@ -107,8 +107,84 @@
     h4 {
         margin-left: 100px;
         margin-top: -45px;
-        font-size: 30px;
+        font-size: 25px;
     }
+
+    table, th, td {
+        padding: 1rem;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    thead th {
+        position: sticky;
+        top: 0;
+        left: 0;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #9A9A9A;
+    }
+
+    tbody tr {
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: right;
+    }
+
+    main.table {
+        width: 100%;
+        height: 100%;
+        background-color: #fff5;
+        overflow: hidden;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    #column {
+        font-size: 15px;
+    }
+
+    #addTask {
+        position: absolute;
+        margin-top: -80px;
+        margin-left: 920px;
+        height: 50px;
+        width: 156px;
+        border-radius: 10px;
+        background: #8ACCA4;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #FFFBFB;
+        border: none;
+    }
+
+    #seeMore {
+        position: absolute;
+        margin-top: -150px;
+        margin-left: 945px;
+        height: 40px;
+        width: 120px;
+        border-radius: 10px;
+        background: black;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #FFFFFF;
+        border: none;
+    
 
 </style>
 <h3>Dashboard</h3>
@@ -145,6 +221,60 @@
     <svg id="todosIcon" xmlns="http://www.w3.org/2000/svg" width="60" height="40" viewBox="0 0 98 77" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M1 74.5C1 75.3284 1.67157 76 2.5 76H95.5C96.3284 76 97 75.3284 97 74.5V15.7353C97 14.9069 96.3284 14.2353 95.5 14.2353H39.4L25.4304 1.39562C25.1536 1.14119 24.7914 1 24.4154 1H2.5C1.67157 1 1 1.67157 1 2.5V74.5Z" stroke="#FABB18" stroke-width="2" />
     </svg>
-    <h4>To-Dos</h4>
+    <h4>To-Do</h4>
+    <button id=addTask>ADD TASK+</button>
+
+    <main class="table">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>""</th>
+                    <th>Status</th>
+                    <th>Tasks</th>
+                    <th>Category</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>edit&delete</td>
+                    <td>checkbox</td>
+                    <td>Coding</td>
+                    <td><p class="category school">School</p></td>
+                    <th>November 14, 2023</th>
+                    <td>High</td>
+                    <td>Sermonan si Hugo</td>
+                </tr>
+
+                <tr>
+                    <td>edit&delete</td>
+                    <td>checkbox</td>
+                    <td>Coding</td>
+                    <td><p class="category organization">Organization</p></td>
+                    <th>November 14, 2023</th>
+                    <td>Medium</td>
+                    <td>Sermonan si Hugo</td>
+                </tr>
+
+                <tr>
+                    <td>edit&delete</td>
+                    <td>checkbox</td>
+                    <td>Coding</td>
+                    <td><p class="category personal">Personal</p></td>
+                    <th>November 14, 2023</th>
+                    <td>Low</td>
+                    <td>Sermonan si Hugo</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </main>
+
+    <button id=seeMore>SEE MORE</button>
 
 </div>
