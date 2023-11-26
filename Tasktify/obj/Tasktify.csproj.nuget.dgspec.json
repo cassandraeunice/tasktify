@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\HP\\source\\repos\\tasktify\\Tasktify\\Tasktify.csproj": {}
+    "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\Tasktify.csproj": {}
   },
   "projects": {
-    "D:\\Users\\HP\\source\\repos\\tasktify\\Tasktify\\Tasktify.csproj": {
+    "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\Tasktify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\HP\\source\\repos\\tasktify\\Tasktify\\Tasktify.csproj",
+        "projectUniqueName": "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\Tasktify.csproj",
         "projectName": "Tasktify",
-        "projectPath": "D:\\Users\\HP\\source\\repos\\tasktify\\Tasktify\\Tasktify.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\HP\\source\\repos\\tasktify\\Tasktify\\obj\\",
+        "projectPath": "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\Tasktify.csproj",
+        "packagesPath": "C:\\Users\\Coleen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Coleen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

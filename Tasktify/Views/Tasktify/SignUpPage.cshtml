@@ -1,5 +1,135 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_SignUp";
 }
+
+<style>
+    #blueEllipse {
+        width: 500px;
+        height: 500px;
+        margin-left: 700px;
+        margin-top: -150px;
+        border-radius: 390px;
+        background: #2D55FB;
+        filter: blur(280px);
+        z-index: -1;
+    }
+
+    #blueEllipse2 {
+        width: 500px;
+        height: 300px;
+        margin-left: -800px;
+        margin-top: -200px;
+        border-radius: 390px;
+        background: #2D55FB;
+        filter: blur(280px);
+        z-index: -1;
+    }
+
+
+    #signupContainer {
+        width: 1200px;
+        height: 1000px;
+        background: #FFF;
+        margin-top: -650px;
+        margin-left: 750px;
+        position: fixed;
+    }
+
+    #text {
+        font-family: Poppins;
+        font-size: 90px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 120%;
+        margin-top: -400px;
+        width: 747px;
+        height: 300px;
+        color: #000000, #00000000 position: fixed;
+    }
+
+    h5 {
+        padding-top: 85px;
+        padding-left: 80px;
+        font-size: 35px;
+    }
+
+    input {
+        width: 500px;
+        height: 30px;
+        border-radius: 8px;
+        font-size: 20px;
+        border: 2px solid #DADADA;
+    }
+
+    form {
+        margin-top: -20px;
+        margin-left: 80px;
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    button {
+        width: 510px;
+        height: 45px;
+        border-radius: 8px;
+        background: #6DBA8B;
+        border: none;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+    }
+
+    h7 {
+        margin-left: 132px;
+    }
+
+    #login {
+        text-decoration: none;
+        color: #25CC4ADE;
+    }
+
+    h1 {
+        font-family: Poppins;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 180%;
+        margin-left: 50px;
+    }
+
+</style>
+
+<center>
+    <div id="blueEllipse">
+    </div>
+    <div id="blueEllipse2">
+    </div>
+</center>
+
+<div>
+    <h1 id="text">Lorem ipsum dolor sit amet consectetur adipiscing elit</h1>
+</div>
+
+<div id="signupContainer">
+    <h5>Create an account </h5>
+        <form id="signupForm" asp-action="SignUp" asp-controller="Tasktify" method="post">
+            <label id="firstName">First Name</label> <br />
+            <input /><br /><br />
+            <label id="lastName">Last Name</label> <br />
+            <input /><br /><br />
+            <label id="emailText">Email</label> <br />
+            <input /><br /><br />
+            <label id="passwordText">Password</label> <br />
+            <input /> <br /><br />
+            <label id="confirmpassText">Confirm Password</label> <br />
+            <input /> <br /><br />
+            <button>Sign Up</button><br /><br />
+        <h7>Already have an account? <a href="" id="login">Log in.</a></h7>
+            
+
+        </form>
+
+</div>

@@ -9,61 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tasktify
 build_property.RootNamespace = Tasktify
-build_property.ProjectDir = D:\Users\HP\source\repos\tasktify\Tasktify\
+build_property.ProjectDir = C:\Users\Coleen\Source\Repos\tasktify\Tasktify\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Users\HP\source\repos\tasktify\Tasktify
+build_property.MSBuildProjectDirectory = C:\Users\Coleen\Source\Repos\tasktify\Tasktify
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Shared/Error.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Shared/_Login.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Shared/_Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Shared/_SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/Categories.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/Categories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcQ2F0ZWdvcmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/Dashboard.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/LoginPage.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/LoginPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcTG9naW5QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/Privacy.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/SignUpPage.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/SignUpPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcU2lnblVwUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/Tasks.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/Tasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcVGFza3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Tasktify/UserProfile.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Tasktify/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3RpZnlcVXNlclByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/_ViewImports.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/_ViewStart.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/HP/source/repos/tasktify/Tasktify/Views/Shared/_Layout.cshtml]
+[C:/Users/Coleen/Source/Repos/tasktify/Tasktify/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-79ut7rhu5l

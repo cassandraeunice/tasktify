@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sign Up</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+
+        body {
+            background-color: #6DBA8B;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        span {
+            color: #00FF44;
+        }
+
+        #tasktify {
+            margin-left: 25px;
+            margin-top: 15px;
+            color: #000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .container {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h3 id="tasktify">TASK<span>TIFY.</span></h3>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
