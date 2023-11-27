@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\tasktify\\tasktify\\Tasktify\\Tasktify.csproj": {}
+    "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\tasktify\\tasktify\\Tasktify\\Tasktify.csproj": {
+    "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\tasktify\\tasktify\\Tasktify\\Tasktify.csproj",
+        "projectUniqueName": "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj",
         "projectName": "Tasktify",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\tasktify\\tasktify\\Tasktify\\Tasktify.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\tasktify\\tasktify\\Tasktify\\obj\\",
+        "projectPath": "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
