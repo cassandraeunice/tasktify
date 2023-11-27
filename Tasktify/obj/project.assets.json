@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Coleen\\.nuget\\packages\\": {}
+    "C:\\Users\\NITRO 5\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\Tasktify.csproj",
+      "projectUniqueName": "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\Tasktify (1)\\Tasktify\\Tasktify.csproj",
       "projectName": "Tasktify",
-      "projectPath": "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\Tasktify.csproj",
-      "packagesPath": "C:\\Users\\Coleen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Coleen\\Source\\Repos\\tasktify\\Tasktify\\obj\\",
+      "projectPath": "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\Tasktify (1)\\Tasktify\\Tasktify.csproj",
+      "packagesPath": "C:\\Users\\NITRO 5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\Tasktify (1)\\Tasktify\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Coleen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NITRO 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

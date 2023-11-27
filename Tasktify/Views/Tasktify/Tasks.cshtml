@@ -2,7 +2,15 @@
     ViewData["Title"] = "To-do";
     Layout = "_Layout";
 }
+
 <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
     h3 {
         font-size: 70px;
         color: #000;
@@ -15,7 +23,7 @@
         margin-top: -50px;
         width: 160vh;
     }
-    
+
     table, th, td {
         padding: 1rem;
         border-collapse: collapse;
@@ -47,7 +55,6 @@
         width: 100%;
         height: 100%;
         background-color: #fff5;
-
         overflow: hidden;
     }
 
@@ -61,15 +68,15 @@
         text-align: center;
     }
 
-    .category.school {
+        .category.school {
             background-color: #D2F1F5;
-    }
+        }
 
-    .category.organization {
+        .category.organization {
             background-color: #FFF8E8;
         }
 
-    .category.personal {
+        .category.personal {
             background-color: #DADADA;
         }
 
@@ -88,23 +95,224 @@
         text-align: center;
         color: #FFFBFB;
         border: none;
-        margin-right:20px;
+        margin-right: 20px;
     }
 
+    #addtask {
+        width: 500px;
+        margin: 20px auto;
+        padding: 25px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    h2 {
+        text-align: center;
+        color: #3498db;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    button {
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+        button[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        button[type="reset"] {
+            background-color: #808080;
+            color: #fff;
+            float: right;
+        }
+
+        button.category,
+        button.priority {
+            display: inline-block;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+            button.category:hover,
+            button.priority:hover {
+                background-color: #f4f4f4;
+            }
+
+        button.category {
+            background-color: #87CEEB;
+        }
+
+        button.priority {
+            background-color: #6DBA8B;
+        }
+
+        button.back {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: transparent;
+            color: black;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+            button.back:hover {
+                text-decoration: underline;
+            }
+
+        button.selected {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+    /* New styles for the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+    }
 </style>
 
-<h3>Tasks</h3>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
 
-<div id="todosFolder">
+    <script>
+        const categoryButtons = document.querySelectorAll('.category');
+        const priorityButtons = document.querySelectorAll('.priority');
 
-    <button class="Add_Task">ADD TASK+</button>
+        function handleButtonClick(buttons, selectedButton) {
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
 
-    <main class="table">
+            selectedButton.classList.add('selected');
+        }
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                handleButtonClick(categoryButtons, button);
+            });
+        });
+
+        priorityButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                handleButtonClick(priorityButtons, button);
+            });
+        });
+
+        // Function to open the modal
+        function openModal() {
+            document.getElementById('addTaskModal').style.display = 'flex';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('addTaskModal').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <!-- Trigger button -->
+    <button class="Add_Task" onclick="openModal()">ADD TASK+</button>
+
+    <!-- Modal -->
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content" id="addtask">
+            <button class="back" onclick="closeModal()">&#8592; Back</button>
+            <h2>Add Task</h2>
+
+            <label for="taskname">Task Name</label>
+            <input type="text" id="taskname" name="taskname">
+
+            <label for="category">Category</label>
+            <div>
+                <button class="category" value="personal">Personal</button>
+                <button class="category" value="work">Work</button>
+                <button class="category" value="School">School</button>
+            </div>
+
+            <label for="duedate">Due Date</label>
+            <input type="date" id="duedate" name="duedate">
+
+            <label for="priority">Priority</label>
+            <div>
+                <button class="priority" value="high">High</button>
+                <button class="priority" value="medium">Medium</button>
+                <button class="priority" value="low">Low</button>
+            </div>
+
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" rows="5"></textarea>
+
+            <button type="submit">Save</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </div>
+
+    <h3>Tasks</h3>
+
+    <div id="todosFolder">
+
+        <main class="table">
 
             <table>
                 <thead>
                     <tr>
-                        <th>""</th>
+                        <th>Actions</th>
                         <th>Status</th>
                         <th>Tasks</th>
                         <th>Category</th>
@@ -116,8 +324,13 @@
 
                 <tbody>
                     <tr>
-                        <td>edit&delete</td>
-                        <td>checkbox</td>
+                        <td class="action-column">
+                           
+                            <span class="edit-btn">🖉</span>
+                            <span class="delete-btn">🗑️</span>
+                            
+                        </td>
+                        <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
                         <td>Coding</td>
                         <td><p class="category school">School</p></td>
                         <th>November 14, 2023</th>
@@ -126,8 +339,11 @@
                     </tr>
 
                     <tr>
-                        <td>edit&delete</td>
-                        <td>checkbox</td>
+                        <td class="action-column">
+                            <span class="edit-btn">🖉</span>
+                            <span class="delete-btn">🗑️</span>
+                        </td>
+                        <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
                         <td>Coding</td>
                         <td><p class="category organization">Organization</p></td>
                         <th>November 14, 2023</th>
@@ -136,18 +352,20 @@
                     </tr>
 
                     <tr>
-                        <td>edit&delete</td>
-                        <td>checkbox</td>
+                        <td class="action-column">
+                            <span class="edit-btn">🖉</span>
+                            <span class="delete-btn">🗑️</span>
+                        </td>
+                        <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
                         <td>Coding</td>
                         <td><p class="category personal">Personal</p></td>
                         <th>November 14, 2023</th>
                         <td>Low</td>
                         <td>Sermonan si Hugo</td>
                     </tr>
-
                 </tbody>
             </table>
-        
-    </main>
-   
-</div>
+        </main>
+    </div>
+</body>
+</html>
