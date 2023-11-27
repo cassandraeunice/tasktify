@@ -13,7 +13,12 @@
     }
 
     #categoriesFolder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         margin-top: -60px;
+        margin-left: 85px;
     }
 
     #addNewWorkTaskContainer {
@@ -187,9 +192,9 @@
     }
 
     .Edit_Work_Task {
-        position: absolute;
-        top: 150px;
-        right: 80px;
+        position: relative;
+        top: 0px;
+        left: 930px;
         height: 44px;
         width: 56px;
         border-radius: 10px;
@@ -205,9 +210,9 @@
     }
 
     .Edit_Personal_Task {
-        position: absolute;
-        top: 485px;
-        right: 80px;
+        position: relative;
+        top: 0px;
+        left: 870px;
         height: 44px;
         width: 56px;
         border-radius: 10px;
@@ -223,9 +228,9 @@
     }
 
     .Edit_School_Task {
-        position: absolute;
-        top: 820px;
-        right: 80px;
+        position: relative;
+        top: 0px;
+        left: 890px;
         height: 44px;
         width: 56px;
         border-radius: 10px;
@@ -434,8 +439,7 @@
 
 <div id="categoriesFolder">
     <div id="addNewWorkTaskContainer">
-        <h5 id="workText">Work</h5>
-        <button class="Edit_Work_Task" onclick="openModal()">🔧</button>
+        <h5 id="workText">Work<button class="Edit_Work_Task" onclick="openModal()">🔧</button></h5>
         
         <main class="table">
          
@@ -473,8 +477,8 @@
         </main>
     </div>
     <div id="addNewPersonalTaskContainer">
-        <h5 id="personalText">Personal</h5>
-        <button class="Edit_Personal_Task" onclick="openModal()">🔧</button>
+        <h5 id="personalText">Personal<button class="Edit_Personal_Task" onclick="openModal()">🔧</button></h5>
+        
         <main class="table">
 
             <table>
@@ -511,8 +515,8 @@
         </main>
     </div>
     <div id="addNewSchoolTaskContainer">
-        <h5 id="schoolText">School</h5>
-        <button class="Edit_School_Task" onclick="openModal()">🔧</button>
+        <h5 id="schoolText">School<button class="Edit_School_Task" onclick="openModal()">🔧</button></h5>
+        
         <main class="table">
 
             <table>
