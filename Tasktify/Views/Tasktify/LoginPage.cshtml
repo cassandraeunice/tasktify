@@ -27,12 +27,12 @@
     }
 
     #loginContainer {
-        width: 700px;
-        height: 500px;
+        width: 600px;
+        height: 400px;
         border-radius: 10px;
         background: #FFF;
         margin-top: -500px;
-        margin-left: 400px;
+        margin-left: 450px;
         position: relative;
     }
 
@@ -41,12 +41,18 @@
         font-size: 35px;
     }
 
+    p {
+        color: grey;
+        font-size: 15px;
+        padding: 10px;
+    }
+
     input {
         width: 500px;
         height: 30px;
         border-radius: 8px;
         border: 3px solid #DADADA;
-
+        color: grey;
     }
 
     form {
@@ -56,6 +62,7 @@
     label {
         font-size: 25px;
         font-weight: bold;
+        color: grey;
     }
 
     #emailText {
@@ -66,12 +73,20 @@
         margin-left: -390px;
     }
 
+    #signupText {
+        color: #6DBA8B;
+        font-size: 15px;
+    }
+
     button {
         width: 510px;
         height: 40px;
         border-radius: 8px;
         background: #6DBA8B;
         border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
     }
 </style>
 
@@ -84,17 +99,19 @@
 
 <div id="loginContainer">
     <center>
-    <h5>Login to your Account</h5>
-    <form id="loginForm" asp-action="LoginPage" asp-controller="Tasktify" method="post">
-        <label id="emailText">Email</label> <br />
-        <input /><br />
-        <label id="passwordText">Password</label> <br />
-        <input /> <br />
-        <button>Login Now</button>
+        <h5>Login to your account</h5>
+        <form id="loginForm" asp-action="LoginPage" asp-controller="Tasktify" method="post">
+            <label id="emailText">Email</label> <br />
+            <input /><br /><br />
+            <label id="passwordText">Password</label> <br />
+            <input /> <br /><br />
+            <button>Login now</button>
+            <p>Dont have an account?  <a href="@Url.Action("SignUpPage")" id="signupText">Sign Up</a>
+            <p />
 
-    </form>
+        </form>
 
 
     </center>
-    
+
 </div>

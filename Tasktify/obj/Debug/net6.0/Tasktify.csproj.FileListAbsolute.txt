@@ -118,3 +118,33 @@ C:\Users\NITRO 5\source\repos\tasktify\Tasktify (1)\Tasktify\obj\Debug\net6.0\re
 C:\Users\NITRO 5\source\repos\tasktify\Tasktify (1)\Tasktify\obj\Debug\net6.0\Tasktify.pdb
 C:\Users\NITRO 5\source\repos\tasktify\Tasktify (1)\Tasktify\obj\Debug\net6.0\Tasktify.genruntimeconfig.cache
 C:\Users\NITRO 5\source\repos\tasktify\Tasktify (1)\Tasktify\obj\Debug\net6.0\ref\Tasktify.dll
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\appsettings.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\Tasktify.staticwebassets.runtime.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\Tasktify.exe
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\Tasktify.deps.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\Tasktify.runtimeconfig.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\Tasktify.dll
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\bin\Debug\net6.0\Tasktify.pdb
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.RazorAssemblyInfo.cache
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.RazorAssemblyInfo.cs
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets\msbuild.Tasktify.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets\msbuild.build.Tasktify.props
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Tasktify.props
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Tasktify.props
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\scopedcss\bundle\Tasktify.styles.css
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\scopedcss\projectbundle\Tasktify.bundle.scp.css
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.dll
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\refint\Tasktify.dll
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.pdb
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\Tasktify.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\tasktify\tasktify\Tasktify\obj\Debug\net6.0\ref\Tasktify.dll
