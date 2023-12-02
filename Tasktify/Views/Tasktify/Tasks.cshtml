@@ -8,6 +8,10 @@
         font-family: 'Roboto', sans-serif;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
     }
 
     h3 {
@@ -23,66 +27,10 @@
         width: 160vh;
     }
 
-    table, th, td {
-        padding: 1rem;
-        border-collapse: collapse;
-        text-align: center;
-    }
-
-    thead th {
-        position: sticky;
-        top: 0;
-        left: 0;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0em;
-        text-align: center;
-        color: #9A9A9A;
-    }
-
-    tbody tr {
-        font-family: Poppins;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 30px;
-        letter-spacing: 0em;
-        text-align: right;
-    }
-
-    main.table {
-        width: 100%;
-        height: 100%;
-        background-color: #fff5;
-        overflow: hidden;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    .category {
-        padding: .4rem 0;
-        border-radius: 2rem;
-        text-align: center;
-    }
-
-        .category.school {
-            background-color: #D2F1F5;
-        }
-
-        .category.organization {
-            background-color: #FFF8E8;
-        }
-
-        .category.personal {
-            background-color: #DADADA;
-        }
-
     .Add_Task {
-        position: absolute;
-        top: 70px;
-        right: 0;
+        position: relative;
+        top: -20px;
+        left: 600px;
         height: 66px;
         width: 166px;
         border-radius: 10px;
@@ -107,6 +55,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         position: relative;
     }
+
 
     h2 {
         text-align: center;
@@ -221,6 +170,85 @@
         max-width: 500px;
         width: 100%;
     }
+
+    table, th, td {
+        padding: 1rem;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    main.table {
+        width:77vw;
+        height: 90vh;
+        background-color: #fff5;
+        box-shadow: 0 .4rem .8rem #0005;
+        border-radius: .8rem;
+        overflow:hidden;
+    }
+
+    .table_body{
+        width: 95%;
+        max-height: calc(89% - 1.6rem);
+        background-color: #fffb;
+        margin: .8rem auto;
+        border-radius: .6rem;
+        overflow: auto;
+    }
+
+    .table_body::-webkit-scrollbar{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .table_body::-webkit-scrollbar-thumb {
+         border-radius: .5rem;
+         background-color: #0004;
+         visibility: hidden;
+        }
+
+        .table_body:hover::-webkit-scrollbar-thumb {
+           visibility: visible;
+        }
+
+        table {
+            width: 100%;
+        }
+
+    .category {
+        padding: .4rem 0;
+        border-radius: 2rem;
+        text-align: center;
+    }
+
+    .category.school {
+        background-color: #D2F1F5;
+    }
+
+    .category.organization {
+        background-color: #FFF8E8;
+    }
+
+    .category.personal {
+        background-color: #DADADA;
+    }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #d5d1defe;
+        }
+
+        tbody tr:hover {
+            background-color: #fff6;
+        }
+
+        @@media (max-width: 1000px) {
+            td:not(:first-of-type) {
+                min-width: 12.1rem;
+            }
+        }
+
 </style>
 
 <html lang="en">
@@ -265,8 +293,6 @@
     </script>
 </head>
 <body>
-    <!-- Trigger button -->
-    <button class="Add_Task" onclick="openModal()">Add Tasks+</button>
 
     <!-- Modal -->
     <div id="addTaskModal" class="modal">
@@ -302,69 +328,78 @@
         </div>
     </div>
 
-    <h3>Tasks</h3>
+    <h3>
+        Tasks<!-- Trigger button -->
+        <button class="Add_Task" onclick="openModal()">Add Tasks+</button>
+    </h3>
 
     <div id="todosFolder">
 
-        <main class="table">
+            <main class="table">
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Actions</th>
-                        <th>Status</th>
-                        <th>Tasks</th>
-                        <th>Category</th>
-                        <th>Due Date</th>
-                        <th>Priority</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
+                <section class="table_body">
+                    <table>
 
-                <tbody>
-                    <tr>
-                        <td class="action-column">
-                           
-                            <span class="edit-btn">🖉</span>
-                            <span class="delete-btn">🗑️</span>
-                            
-                        </td>
-                        <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
-                        <td>Coding</td>
-                        <td><p class="category school">School</p></td>
-                        <th>November 14, 2023</th>
-                        <td>High</td>
-                        <td>Sermonan si Hugo</td>
-                    </tr>
+                        <thead>
+                            <tr>
+                                <th>Actions</th>
+                                <th>Status</th>
+                                <th>Tasks</th>
+                                <th>Category</th>
+                                <th>Due Date</th>
+                                <th>Priority</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
 
-                    <tr>
-                        <td class="action-column">
-                            <span class="edit-btn">🖉</span>
-                            <span class="delete-btn">🗑️</span>
-                        </td>
-                        <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
-                        <td>Coding</td>
-                        <td><p class="category organization">Organization</p></td>
-                        <th>November 14, 2023</th>
-                        <td>Medium</td>
-                        <td>Sermonan si Hugo</td>
-                    </tr>
+                        <tbody>
+                            <tr>
+                                <td class="action-column">
+                                    <span class="edit-btn">🖉</span>
+                                    <span class="delete-btn">🗑️</span>
+                                </td>
+                                <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
+                                <td>Coding</td>
+                                <td><p class="category personal">Personal</p></td>
+                                <th>November 14, 2023</th>
+                                <td>Low</td>
+                                <td>Sermonan si Hugo</td>
+                            </tr>
 
-                    <tr>
-                        <td class="action-column">
-                            <span class="edit-btn">🖉</span>
-                            <span class="delete-btn">🗑️</span>
-                        </td>
-                        <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
-                        <td>Coding</td>
-                        <td><p class="category personal">Personal</p></td>
-                        <th>November 14, 2023</th>
-                        <td>Low</td>
-                        <td>Sermonan si Hugo</td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
+                            <tr>
+                                <td class="action-column">
+                                    <span class="edit-btn">🖉</span>
+                                    <span class="delete-btn">🗑️</span>
+                                </td>
+                                <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
+                                <td>Coding</td>
+                                <td><p class="category school">School</p></td>
+                                <th>November 14, 2023</th>
+                                <td>Low</td>
+                                <td>Sermonan si Hugo</td>
+                            </tr>
+
+                            <tr>
+                                <td class="action-column">
+                                    <span class="edit-btn">🖉</span>
+                                    <span class="delete-btn">🗑️</span>
+                                </td>
+                                <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
+                                <td>Coding</td>
+                                <td><p class="category organization">Organization</p></td>
+                                <th>November 14, 2023</th>
+                                <td>Low</td>
+                                <td>Sermonan si Hugo</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </section>
+
+            </main>
+       
     </div>
+
 </body>
 </html>
