@@ -42,6 +42,21 @@ namespace Tasktify.Controllers
             return View();
         }
 
+        public IActionResult PersonalTask()
+        {
+            return View();
+        }
+
+        public IActionResult OrganizationTask()
+        {
+            return View();
+        }
+
+        public IActionResult SchoolTask()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
