@@ -14,36 +14,83 @@
         min-height: 100vh;
     }
 
+
+
     h3 {
         font-size: 70px;
         color: #000;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin-left: 30px;
         margin-top: 10px;
+        position: relative;
     }
+
+    .category button,
+    .priority button,
+    .status-button {
+        transition: transform 0.5s ease;
+    }
+
+        .category button.clicked,
+        .priority button.clicked,
+        .status-button.clicked {            
+        }
 
     #todosFolder {
         margin-top: -50px;
         width: 160vh;
     }
+    .table_body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .delete-btn {
+            background-color: #e74c3c;
+            color: #000000;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-right: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+        }
+
+
+
+
 
     .Add_Task {
         position: relative;
-        top: -20px;
-        left: 600px;
-        height: 66px;
-        width: 166px;
-        border-radius: 10px;
+        top: -14px;
+        left: 870px;
+        height: fit-content;
+        width: fit-content;
+        right: -20px;
+        border-radius:15px;
         background: #8ACCA4;
         font-size: 27px;
         font-weight: 400;
         line-height: 27px;
         letter-spacing: 0em;
         text-align: center;
-        color: #FFFBFB;
+        color:#000000;
         border: none;
         margin-right: 20px;
+        transition: transform 0.5s ease;
+       
+        
     }
+
+    .Add_Task.clicked {
+    transform: rotateY(180deg);
+}
 
     #addtask {
         width: 500px;
@@ -249,6 +296,26 @@
             }
         }
 
+    .status-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .status-button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+        .status-button:hover {
+            background-color: #f4f4f4;
+        }
+
+
+
 </style>
 
 <html lang="en">
@@ -258,39 +325,154 @@
     <title>To-do</title>
 
     <script>
-        const categoryButtons = document.querySelectorAll('.category');
-        const priorityButtons = document.querySelectorAll('.priority');
+        document.addEventListener('DOMContentLoaded', function () {
+            let isEditMode = false;
 
-        function handleButtonClick(buttons, selectedButton) {
-            buttons.forEach(button => {
-                button.classList.remove('selected');
+            document.querySelector('.Add_Task').addEventListener('click', openModal);
+            document.querySelector('.edit-btn').addEventListener('click', openEditModal);
+            document.querySelector('button[type="submit"]').addEventListener('click', saveTask);
+            document.querySelector('button[type="reset"]').addEventListener('click', closeModal);
+            document.querySelector('.back').addEventListener('click', function () {
+                if (isEditMode) {
+                    // Handle back button in edit mode (like cancel)
+                    closeModal();
+                } else {
+                    // Handle back button in add mode (like cancel)
+                    closeModal();
+                }
             });
 
-            selectedButton.classList.add('selected');
-        }
+            const categoryButtons = document.querySelectorAll('.category');
+            const priorityButtons = document.querySelectorAll('.priority');
+            const statusButtons = document.querySelectorAll('.status-button');
 
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                handleButtonClick(categoryButtons, button);
+            function handleButtonClick(buttons, selectedButton) {
+                buttons.forEach(button => {
+                    button.classList.remove('selected', 'clicked');
+                });
+
+                selectedButton.classList.add('selected', 'clicked');
+            }
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    handleButtonClick(categoryButtons, button);
+                });
             });
+
+            priorityButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    handleButtonClick(priorityButtons, button);
+                });
+            });
+
+            statusButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    handleButtonClick(statusButtons, button);
+                });
+            });
+
+            const statusButtonsContainer = document.querySelector('.status-buttons');
+            const statusLabel = document.querySelector('label[for="status"]');
+
+            function openModal() {
+                isEditMode = false;
+                clearModalFields();
+
+                // Show/hide the status label and buttons based on the mode
+                statusLabel.style.display = 'none';
+                statusButtonsContainer.style.display = 'none';
+
+                const addButton = document.querySelector('.Add_Task');
+                addButton.classList.add('clicked');
+                document.getElementById('addTaskModal').style.display = 'flex';
+            }
+
+            function openEditModal() {
+                isEditMode = true;
+                clearModalFields();
+
+                // Show the status label and buttons in edit mode
+                statusLabel.style.display = 'block';
+                statusButtonsContainer.style.display = 'flex';
+
+                const editButton = document.querySelector('.edit-btn');
+                editButton.classList.add('clicked');
+                document.getElementById('addTaskModal').style.display = 'flex';
+            }
+
+            function closeModal() {
+                console.log('Close modal function called');
+                isEditMode = false;
+                clearModalFields();
+                const addButton = document.querySelector('.Add_Task');
+                const editButton = document.querySelector('.edit-btn');
+
+                addButton.classList.remove('clicked');
+                editButton.classList.remove('clicked');
+
+                document.getElementById('addTaskModal').style.display = 'none';
+            }
+
+            function clearModalFields() {
+                document.getElementById('taskname').value = '';
+                categoryButtons.forEach(button => button.classList.remove('selected', 'clicked'));
+                priorityButtons.forEach(button => button.classList.remove('selected', 'clicked'));
+                statusButtons.forEach(button => button.classList.remove('selected', 'clicked'));
+                document.getElementById('notes').value = '';
+            }
+
+            function fetchTaskDetails() {
+                // Implement this function to fetch task details based on the selected row
+                // and return an object containing task details
+                return {
+                    name: 'Sample Task',
+                    category: 'personal',
+                    // ... other details
+                };
+            }
+
+            function populateModalFields(taskDetails) {
+                document.getElementById('taskname').value = taskDetails.name;
+                // ... populate other fields
+            }
+
+            function saveTask() {
+                const taskDetails = {
+                    name: document.getElementById('taskname').value,
+                    // ... other details
+                };
+
+                // You can use isEditMode to determine whether to save as a new task or update an existing one
+                if (isEditMode) {
+                    // Implement logic to update the existing task
+                    console.log('Updating task:', taskDetails);
+                } else {
+                    // Implement logic to save a new task
+                    console.log('Saving new task:', taskDetails);
+                }
+
+                function confirmDelete(button) {
+                    var result = confirm("Are you sure you want to delete this?");
+                    if (result) {
+                        // User clicked "OK," delete the row
+                        deleteRow(button);
+                    }
+                    // If user clicked "Cancel," do nothing
+                }
+
+                function deleteRow(button) {
+                    var row = button.parentNode.parentNode;
+                    row.parentNode.removeChild(row);
+                }
+
+                closeModal();
+            }
         });
-
-        priorityButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                handleButtonClick(priorityButtons, button);
-            });
-        });
-
-        // Function to open the modal
-        function openModal() {
-            document.getElementById('addTaskModal').style.display = 'flex';
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            document.getElementById('addTaskModal').style.display = 'none';
-        }
     </script>
+
+
+
 </head>
 <body>
 
@@ -320,6 +502,12 @@
                 <button class="priority" value="low">Low</button>
             </div>
 
+            <label for="status">Status</label>
+            <div class="status-buttons">
+                <button class="status-button completed" value="completed" style="background-color: #2ecc71; font-size: 16px;">Completed</button>
+                <button class="status-button not-completed" value="notCompleted" style="background-color: #e74c3c; font-size: 16px;">Not Completed</button>
+            </div>
+
             <label for="notes">Notes</label>
             <textarea id="notes" name="notes" rows="5"></textarea>
 
@@ -328,9 +516,13 @@
         </div>
     </div>
 
+
+
     <h3>
         Tasks<!-- Trigger button -->
-        <button class="Add_Task" onclick="openModal()">Add Tasks+</button>
+        <button class="Add_Task" onclick="openModal()">+</button>
+    
+       
     </h3>
 
     <div id="todosFolder">
@@ -355,8 +547,8 @@
                         <tbody>
                             <tr>
                                 <td class="action-column">
-                                    <span class="edit-btn">🖉</span>
-                                    <span class="delete-btn">🗑️</span>
+                                <button class="edit-btn" onclick="openEditModal()">🖉</button>
+                                <button class="delete-btn">🗑️</button>
                                 </td>
                                 <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
                                 <td>Coding</td>
@@ -368,8 +560,8 @@
 
                             <tr>
                                 <td class="action-column">
-                                    <span class="edit-btn">🖉</span>
-                                    <span class="delete-btn">🗑️</span>
+                                <button class="edit-btn" onclick="openEditModal()">🖉</button>
+                                <button class="delete-btn">🗑️</button>
                                 </td>
                                 <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
                                 <td>Coding</td>
@@ -381,8 +573,8 @@
 
                             <tr>
                                 <td class="action-column">
-                                    <span class="edit-btn">🖉</span>
-                                    <span class="delete-btn">🗑️</span>
+                                <button class="edit-btn" onclick="openEditModal()">🖉</button>
+                                <button class="delete-btn">🗑️</button>
                                 </td>
                                 <td class="status-column"><input type="checkbox" class="status-checkbox"></td>
                                 <td>Coding</td>

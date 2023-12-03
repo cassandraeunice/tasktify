@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj": {}
+    "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\GUMANA KA NA PLS\\Tasktify\\Tasktify.csproj": {}
   },
   "projects": {
-    "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj": {
+    "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\GUMANA KA NA PLS\\Tasktify\\Tasktify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj",
+        "projectUniqueName": "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\GUMANA KA NA PLS\\Tasktify\\Tasktify.csproj",
         "projectName": "Tasktify",
-        "projectPath": "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\Tasktify.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\HP\\source\\repos\\taskify\\Taskify\\Tasktify\\obj\\",
+        "projectPath": "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\GUMANA KA NA PLS\\Tasktify\\Tasktify.csproj",
+        "packagesPath": "C:\\Users\\NITRO 5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NITRO 5\\source\\repos\\tasktify\\GUMANA KA NA PLS\\Tasktify\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NITRO 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
